@@ -1,0 +1,6 @@
+model\Persona.class
+service\PersonaService.class
+service\IPersonaService.class
+repository\PersonaRepository.class
+com\artilugios\Artilugios\ArtilugiosApplication.class
+.netbeans_automatic_build
