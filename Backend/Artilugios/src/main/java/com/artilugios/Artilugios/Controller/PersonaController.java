@@ -43,9 +43,9 @@ public class PersonaController {
     return new ResponseEntity<>(perso,HttpStatus.CREATED);
     }
     @DeleteMapping("/personas/borrar/{id}")
-    public String deletePersona(@PathVariable Long id){
+    public ResponseEntity<?> deletePersona(@PathVariable ("id") Long id){
     interPersona.deletePersona(id);
-    return "La persona fue eliminada correctamente";
+    return new ResponseEntity<>(HttpStatus.OK);
     }
     @PutMapping("/personas/editar/{id}")
       public ResponseEntity<?> editarPersona(@PathVariable ("id") Long id,
@@ -54,6 +54,11 @@ public class PersonaController {
     
    perso.setNombre(persona.getNombre());
    perso.setApellido(persona.getApellido());
+   perso.setDni(persona.getDni());
+   perso.setDireccion(persona.getDireccion());
+   perso.setNacionalidad(persona.getNacionalidad());
+   perso.setProvincia(persona.getProvincia());
+   perso.setLocalidad(persona.getLocalidad());
    interPersona.savePersona(perso);
    return new ResponseEntity(perso,HttpStatus.OK);
                                
