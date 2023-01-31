@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://artilugioscn23.web.app")
 @RestController
 public class ProductoController {
     @Autowired
