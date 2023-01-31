@@ -45,7 +45,7 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
 
 
         List<String> list1 = Arrays.asList(new String[]{"Authorization", "Cache-Control", "Content-Type"});
-        List<String> list2 = Arrays.asList(new String[]{"https://argentinaprograma22.web.app"});
+        List<String> list2 = Arrays.asList(new String[]{"http://localhost:4200"});
         List<String> list3 = Arrays.asList(new String[]{"GET", "POST", "PUT", "DELETE", "OPTIONS"});
         List<String> list4 = Arrays.asList(new String[]{"Authorization"});
 
